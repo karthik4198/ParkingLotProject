@@ -7,6 +7,13 @@ public class ParkingSlots {
     private ParkingSlotStaus parkingSlotStaus;
     private ParkingFloors parkingFloors;
 
+    public ParkingSlots(int number, VehicleType vehicleType, ParkingSlotStaus parkingSlotStaus, ParkingFloors parkingFloors){
+        this.parkingSlotNumber=number;
+        this.vehicleType=vehicleType;
+        this.parkingSlotStaus=parkingSlotStaus;
+        this.parkingFloors=parkingFloors;
+    }
+
     public int getParkingSlotNumber() {
         return parkingSlotNumber;
     }

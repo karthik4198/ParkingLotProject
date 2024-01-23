@@ -6,6 +6,13 @@ public class Gate {
     private Operator operator;
     private GateType gateType;
 
+    public Gate(int gateNumber, GateStatus status, Operator operator, GateType gateType) {
+        this.gateNumber = gateNumber;
+        this.status = status;
+        this.operator = operator;
+        this.gateType = gateType;
+    }
+
     public int getGateNumber() {
         return gateNumber;
     }

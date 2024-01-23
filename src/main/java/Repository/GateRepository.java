@@ -8,15 +8,19 @@ import java.util.HashMap;
 public class GateRepository {
 
     //To get the gate info by gate Id
-    HashMap<Integer, Gate> map=new HashMap<>();
+    static HashMap<Integer, Gate> map=new HashMap<>();
 
-    public Gate findGateById(int gateId) throws InvalidGateNumberException {
+    public static Gate findGateById(int gateId) throws InvalidGateNumberException {
         if(map.containsKey(gateId)){
             return map.get(gateId);
         }
         else{
             throw new InvalidGateNumberException();
         }
+    }
+
+    public void save(int id,Gate gate){
+        map.put(id,gate);
     }
 
 

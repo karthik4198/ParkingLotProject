@@ -8,6 +8,8 @@ public class Ticket {
     private Date currentEntryTime;
     private Gate gate;
     private Operator operator;
+
+    private ParkingFloors parkingFloors;
     private ParkingSlots parkingSlots;
 
     public String getNumber() {
@@ -57,5 +59,13 @@ public class Ticket {
 
     public void setCurrentEntryTime(Date currentEntryTime) {
         this.currentEntryTime = currentEntryTime;
+    }
+
+    public ParkingFloors getParkingFloors() {
+        return parkingFloors;
+    }
+
+    public void setParkingFloors(ParkingFloors parkingFloors) {
+        this.parkingFloors = parkingFloors;
     }
 }

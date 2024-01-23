@@ -7,6 +7,12 @@ public class ParkingFloors {
     private List<ParkingSlots> parkingSlotsList;
     private ParkingFloorStatus parkingFloorStatus;
 
+    public ParkingFloors(int floorNumber,List<ParkingSlots> parkingSlotsList,ParkingFloorStatus parkingFloorStatus){
+        this.floorNumber=floorNumber;
+        this.parkingSlotsList=parkingSlotsList;
+        this.parkingFloorStatus=parkingFloorStatus;
+    }
+
     public int getFloorNumber() {
         return floorNumber;
     }

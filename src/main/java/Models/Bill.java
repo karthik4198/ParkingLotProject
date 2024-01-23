@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Bill {
     private Vehicle vehicle;
-    private Ticket ticker;
+    private Ticket ticket;
     private LocalDateTime currentExitTime;
     private Gate exitGate;
     private List<Payments> paymentsList;
@@ -21,12 +21,12 @@ public class Bill {
         this.vehicle = vehicle;
     }
 
-    public Ticket getTicker() {
-        return ticker;
+    public Ticket getTicket() {
+        return ticket;
     }
 
-    public void setTicker(Ticket ticker) {
-        this.ticker = ticker;
+    public void setTicket(Ticket ticket) {
+        this.ticket = ticket;
     }
 
     public LocalDateTime getCurrentExitTime() {

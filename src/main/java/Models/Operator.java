@@ -3,6 +3,10 @@ package Models;
 public class Operator {
     private int operatorId;
     private String operatorName;
+    public Operator(int operatorId, String operatorName) {
+        this.operatorId = operatorId;
+        this.operatorName = operatorName;
+    }
 
     public int getOperatorId() {
         return operatorId;

@@ -7,8 +7,8 @@ import java.util.HashMap;
 
 public class VehicleRepository {
 
-    HashMap<String,Vehicle> map=new HashMap<>();
-    public Vehicle findVehicleByNumber(String vehicleNumber) throws InvalidVehicleNumber {
+    static HashMap<String,Vehicle> map=new HashMap<>();
+    public static Vehicle findVehicleByNumber(String vehicleNumber) throws InvalidVehicleNumber {
         if (map.containsKey(vehicleNumber)) {
             return map.get(vehicleNumber);
         }
@@ -17,7 +17,7 @@ public class VehicleRepository {
         }
     }
 
-    public void save(String vehicleNumber,Vehicle vehicle) {
+    public static void save(String vehicleNumber,Vehicle vehicle) {
         map.put(vehicleNumber,vehicle);
     }
 }

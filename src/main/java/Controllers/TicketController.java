@@ -10,11 +10,11 @@ import Models.Ticket;
 import Services.TicketService;
 
 public class TicketController {
-    public TicketService ticketService;
+    public TicketService ticketService=new TicketService();
     public String SUCCESS_MESSAGE="Ticket generated successfully";
     public String Invalid_Gate="Invalid Gate";
     public String Invalid_Parking_Lot="Invalid Parking Lot";
-    public String  ParkingSlotsFull="Invalid Parking Lot"
+    public String  ParkingSlotsFull="Invalid Parking Lot";
     public TicketResponse issueTicket(TicketRequest ticketRequest) {
         Ticket ticket=null;
         try {

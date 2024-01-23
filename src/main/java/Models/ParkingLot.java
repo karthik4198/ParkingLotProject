@@ -1,15 +1,24 @@
 package Models;
 
 import Strategies.ParkingPlaceAllotmentStrategy;
+import Strategies.ParkingPlaceAllotmentStrategyFactory;
 
 import java.util.List;
 
 public class ParkingLot {
+    private int parkingLotNumber;
     private List<ParkingFloors> parkingFloorsList;
     private ParkingLotStatus parkingLotStatus;
     private List<Gate> gateList;
 
     private ParkingPlaceAllotmentStrategy allotmentStrategy;
+
+    public ParkingLot(int parkingLotNumber, List<ParkingFloors> parkingFloorsList, ParkingLotStatus parkingLotStatus, List<Gate> gateList){
+        this.parkingLotNumber=parkingLotNumber;
+        this.parkingFloorsList=parkingFloorsList;
+        this.parkingLotStatus=parkingLotStatus;
+        this.gateList=gateList;
+    }
 
     public List<ParkingFloors> getParkingFloorsList() {
         return parkingFloorsList;
@@ -41,5 +50,13 @@ public class ParkingLot {
 
     public void setAllotmentStrategy(ParkingPlaceAllotmentStrategy allotmentStrategy) {
         this.allotmentStrategy = allotmentStrategy;
+    }
+
+    public int getParkingLotNumber() {
+        return parkingLotNumber;
+    }
+
+    public void setParkingLotNumber(int parkingLotNumber) {
+        this.parkingLotNumber = parkingLotNumber;
     }
 }

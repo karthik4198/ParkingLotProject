@@ -6,14 +6,18 @@ import Models.ParkingLot;
 import java.util.HashMap;
 
 public class ParkingLotRepository {
-    HashMap<Integer, ParkingLot> map=new HashMap<>();
+    public static HashMap<Integer, ParkingLot> parkingLotRepositoryMap=new HashMap<>();
 
-    public ParkingLot findParkingLotById(int id) throws ParkingLotNotAvailableException {
-        if(map.containsKey(id)){
-            return map.get(id);
+    public static ParkingLot findParkingLotById(int id) throws ParkingLotNotAvailableException {
+        if(parkingLotRepositoryMap.containsKey(id)){
+            return parkingLotRepositoryMap.get(id);
         }
         else{
             throw new ParkingLotNotAvailableException();
         }
+    }
+
+    public void save(int id,ParkingLot parkingLot){
+        parkingLotRepositoryMap.put(id,parkingLot);
     }
 }
